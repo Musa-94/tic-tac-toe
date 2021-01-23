@@ -4,16 +4,15 @@ import {
     Switch,
     HashRouter as Router,
 } from 'react-router-dom';
-import SignUpPage from '../signUpPage';
-import SignInPage from '../signInPage';
+import LoginPage from '../loginPage';
 
 const Routers = props => {
     return (
         <Router>
             <Suspense fallback={<div>Loading...</div>}>
                 <Switch>
-                    <Route path={'/'} exact component={SignUpPage}/>
-                    <Route path={'/sign-in'} component={SignInPage}/>
+                    <Route path={'/'} exact component={LoginPage}/>
+                    {/*<Route path={'/sign-in'} component={SignInPage}/>*/}
                 </Switch>
             </Suspense>
         </Router>

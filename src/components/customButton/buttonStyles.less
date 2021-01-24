@@ -1,16 +1,18 @@
+@import 'src/themes/paletree.less';
+
 .border-button {
   text-decoration: none;
   display: inline-block;
   padding: 20px 30px;
-  margin: 10px 20px;
   position: relative;
-  color: black;
-  border: 1px solid rgba(255, 255, 255, .4);
-  background: none;
+  color: @color2;
+  border: 1px solid @rgba1;
+  background-image: @gradient3;
   font-weight: 300;
-  font-family: 'Montserrat', sans-serif;
+  font-family: Georgia, sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
+  box-sizing: border-box;
 }
 .border-button:before, .border-button:after {
   content: "";
@@ -23,15 +25,15 @@
 .border-button:before {
   bottom: 0;
   left: 0;
-  border-left: 1px solid blue;
-  border-top: 1px solid blue;
+  border-left: 1px solid @color2;
+  border-top: 1px solid @color2;
   transition: 0s ease opacity .8s, .2s ease width .4s, .2s ease height .6s;
 }
 .border-button:after {
   top: 0;
   right: 0;
-  border-right: 1px solid blue;
-  border-bottom: 1px solid blue;
+  border-right: 1px solid @color2;
+  border-bottom: 1px solid @color2;
   transition: 0s ease opacity .4s, .2s ease width, .2s ease height .2s;
 }
 .border-button:hover:before,
@@ -47,5 +49,9 @@
   transition: 0s ease opacity .4s, .2s ease height .4s, .2s ease width .6s;
 }
 .border-button:hover {
-  background: rgba(255, 255, 255, .2);
+  background-image: @gradient3;
+}
+
+.border-button:focus {
+  border: 0;
 }

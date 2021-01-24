@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import constants from '../../constants';
+import constants from 'src/constants';
 
 const LoginPage = props => {
     const {

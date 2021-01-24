@@ -1,6 +1,6 @@
 import React from 'react';
 import Routers from './Routers.jsx';
-import Modals from "../../modals";
+import Modals from 'src/modules/modals';
 
 const MainPage = props => {
     return (

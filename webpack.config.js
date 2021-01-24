@@ -9,6 +9,13 @@ module.exports = {
         path: path.resolve(__dirname, './dist'),
         filename: 'index.js'
     },
+    resolve: {
+        extensions: ['.js', '.jsx'],
+        alias: {
+            root: __dirname,
+            src: path.resolve(__dirname, 'src'),
+        },
+    },
     devServer: {
         contentBase: path.resolve(__dirname, './dist'),
         compress: true,

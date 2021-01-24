@@ -1,4 +1,4 @@
-import constants from '../../constants';
+import constants from 'src/constants';
 
 const initialState = {
     [constants.SIGN_UP_MODAL_WINDOW_TYPE]: {
@@ -17,7 +17,7 @@ export default (state = initialState, action) => {
     switch (action.type) {
         case constants.OPEN_MODAL_WINDOW: {
             const { type } = action.payload;
-            console.log(action.payload);
+
             return {
                 ...state,
                 [type]: {

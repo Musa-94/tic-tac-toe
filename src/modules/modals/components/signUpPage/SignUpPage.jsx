@@ -1,27 +1,33 @@
 import React, { useCallback } from 'react';
 import Modal from 'react-modal';
 
-import constants from '../../../constants';
-import CustomButton from '../../../components/customButton';
+import constants from 'src/constants';
+import CustomButton from 'src/components/customButton';
 import './signUpPageStyles.less';
 
 const getContent = () => {
     return (
-        <>
+        <div className={'wrapper'}>
             <div className={'container__header'}
                  children={'Регистрация'}
             />
-            <div className={'container'}>
+            <div className={'container__content'}>
                 <form className={'content'}>
                     <input type={'text'}
+                           title={'Введите логин'}
+                           required
                            className={'login input'}
                            placeholder={'Введите логин...'}
                     />
                     <input type={'password'}
+                           title={'Введите пароль'}
+                           required
                            className={'input'}
                            placeholder={'Введите пароль'}
                     />
                     <input type={'password'}
+                           title={'Введите подтвержденние пароля'}
+                           required
                            className={'input'}
                            placeholder={'Подтвердите пароль'}
                     />
@@ -30,7 +36,7 @@ const getContent = () => {
                     />
                 </form>
             </div>
-        </>
+        </div>
     )
 }
 
@@ -45,7 +51,7 @@ const SignUpPage = props => {
         closeModalWindow({
             type: constants.SIGN_UP_MODAL_WINDOW_TYPE,
         });
-    }, [closeModalWindow])
+    }, [closeModalWindow]);
 
     return (
         <Modal
@@ -54,8 +60,8 @@ const SignUpPage = props => {
             children={getContent()}
             ariaHideApp={false}
             onRequestClose={onClose}
-            shouldCloseOnEsc={true}
-            shouldCloseOnOverlayClick={true}
+            shouldCloseOnEsc={false}
+            shouldCloseOnOverlayClick={false}
         />
     );
 }

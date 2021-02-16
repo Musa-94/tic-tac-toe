@@ -1,4 +1,4 @@
-import constants from '../../constants';
+import constants from 'src/constants';
 import { takeEvery } from 'redux-saga/effects'
 // import * as actions from '../loginPage/actions;'
 // import * as selectors from '../loginPage/selectors;'

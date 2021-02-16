@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import constants from 'src/constants';
 import { getModalStyles } from './logic';
-import SignUpPage from './components/signUpPage';
+import SignUpModalWindow from './components/SignUpModalWindow';
 
 const Modals = props => {
     const {
@@ -10,7 +10,7 @@ const Modals = props => {
     } = props;
 
     const signUpModalData = modals[constants.SIGN_UP_MODAL_WINDOW_TYPE];
-    const signINModalData = modals[constants.SIGN_IN_MODAL_WINDOW_TYPE];
+    // const signInModalData = modals[constants.SIGN_IN_MODAL_WINDOW_TYPE];
 
     const styles = useMemo(() => getModalStyles(), [getModalStyles]);
 
@@ -27,7 +27,7 @@ const Modals = props => {
 
     return (
         <>
-            <SignUpPage
+            <SignUpModalWindow
                 isShow={signUpModalData.isShow}
                 styles={modalStyles}
                 closeModalWindow={closeModalWindow}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import Component from './SignUpPage.jsx';
+import Component from './SignUpModalWindow.jsx';
 
 const mapStateToProps = state => ({
 

@@ -7,6 +7,7 @@ import { createStore, applyMiddleware } from 'redux';
 import App from './app/App.jsx';
 import RootSagas from './roots/rootSagas'
 import RootReducer from './roots/rootReducers';
+import { createLocalization } from 'src/lang/localization';
 
 function initialize() {
     const sagaMiddleware = createSagaMiddleware();
@@ -16,6 +17,7 @@ function initialize() {
     process.env.NODE_ENV !== 'production' && (window.store = store);
 
     sagaMiddleware.run(RootSagas);
+    createLocalization('en');
 
     ReactDOM.render(
         <Provider store={store}>

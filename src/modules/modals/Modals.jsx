@@ -14,7 +14,7 @@ const Modals = props => {
 
     const styles = useMemo(() => getModalStyles(), [getModalStyles]);
 
-    const modalStyles = {
+    const modalStyles = useMemo(() => ({
         content: {
             ...styles.content,
             width: 500,
@@ -23,7 +23,7 @@ const Modals = props => {
             ...styles.overlay,
             background: 'rgba(0,0,0,0.5)',
         }
-    }
+    }), [styles]);
 
     return (
         <>

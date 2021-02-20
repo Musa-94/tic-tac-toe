@@ -10,11 +10,12 @@ module.exports = {
         filename: 'index.js'
     },
     resolve: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
         alias: {
             root: __dirname,
             src: path.resolve(__dirname, 'src'),
         },
+        modules: ['node_modules', 'src'],
     },
     devServer: {
         contentBase: path.resolve(__dirname, './dist'),
@@ -25,12 +26,16 @@ module.exports = {
     },
     module: {
         rules: [
-            {test: /\.jsx?$/,
+            {test: /\.(tsx?|jsx?)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env', '@babel/preset-react'],
+                        presets: [
+                            '@babel/preset-env',
+                            '@babel/preset-react',
+                            '@babel/preset-typescript'
+                        ],
                         plugins: [
                             [
                                 '@babel/plugin-proposal-decorators',
@@ -40,6 +45,7 @@ module.exports = {
                             ],
                             ['@babel/plugin-proposal-class-properties', { loose: true }],
                             '@babel/plugin-syntax-dynamic-import',
+                            '@babel/plugin-syntax-typescript',
                             '@babel/plugin-transform-regenerator',
                             '@babel/plugin-syntax-import-meta',
                             '@babel/plugin-proposal-json-strings',

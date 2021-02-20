@@ -1,9 +1,10 @@
 import React from 'react';
-import CustomButton from 'src/components/customButton';
-import { withLocalization } from 'src/lang/localization';
+import CustomButton from '../../components/customButton';
+import { SingUpProps } from '../../types';
+import { withLocalization } from '../../lang/localization';
 import './signUpStyles.less';
 
-const SignUp = props => {
+const SignUp: React.FC<SingUpProps> = (props: SingUpProps): React.ReactElement => {
     const {
         t
     } = props;
@@ -39,7 +40,7 @@ const SignUp = props => {
                 </form>
             </div>
         </div>
-    )
+    );
 }
 
 export default React.memo(withLocalization()(SignUp));

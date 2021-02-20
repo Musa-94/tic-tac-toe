@@ -1,15 +1,17 @@
 {
   "plugins": [
+    "@babel/plugin-syntax-typescript",
     [
       "module-resolver",
       {
-        "extensions": [".js", ".jsx"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
         "root": ["./src"],
         "alias": {
-          "root": ".",
-          "src": "/src"
+          "root": "src",
+          "src": "src"
         }
       }
     ]
-  ]
+  ],
+  "presets": ["@babel/preset-typescript"]
 }

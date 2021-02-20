@@ -1,12 +1,11 @@
 import React, { useCallback } from 'react';
 import Modal from 'react-modal';
 import constants from 'src/constants';
-import SignUp from 'src/modules/singUp/SignUp.jsx';
+import SignUp from 'src/modules/singUp';
 
 
 const SignUpModalWindow = props => {
     const {
-        t,
         isShow,
         styles,
         closeModalWindow,

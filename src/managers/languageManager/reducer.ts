@@ -1,8 +1,9 @@
 import constants from '../../constants';
+import { configSite } from '../../config';
 import { InitialState, ChangeLanguageAction } from '../../types';
 
 const initialState: InitialState = {
-    lang: 'en',
+    lang: configSite.defaultLanguage,
 }
 
 export default (state = initialState, action: ChangeLanguageAction): InitialState => {

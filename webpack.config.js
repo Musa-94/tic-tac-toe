@@ -4,13 +4,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/index.tsx',
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: 'index.js'
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        extensions: ['.ts', '.tsx', '.js', '.jsx'],
         alias: {
             root: __dirname,
             src: path.resolve(__dirname, 'src'),

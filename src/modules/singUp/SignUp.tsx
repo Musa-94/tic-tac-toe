@@ -17,19 +17,19 @@ const SignUp: React.FC<SingUpProps> = (props: SingUpProps): React.ReactElement =
             <div className={'container__content'}>
                 <form className={'content'}>
                     <input type={'text'}
-                           title={'Введите логин'}
+                           title={t('enterLogin')}
                            required
                            className={'login input'}
                            placeholder={t('enterLogin')}
                     />
                     <input type={'password'}
-                           title={'Введите пароль'}
+                           title={t('enterPassword')}
                            required
                            className={'input'}
                            placeholder={t('enterPassword')}
                     />
                     <input type={'password'}
-                           title={'Введите подтвержденние пароля'}
+                           title={t('confirmThePassword')}
                            required
                            className={'input'}
                            placeholder={t('confirmThePassword')}

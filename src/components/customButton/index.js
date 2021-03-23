@@ -1,2 +1,2 @@
-import CustomButton from './CustomButton.jsx';
+import CustomButton from './CustomButton.tsx';
 export default CustomButton;

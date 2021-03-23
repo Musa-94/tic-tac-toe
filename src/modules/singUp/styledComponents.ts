@@ -1,18 +1,17 @@
-import styled from 'styled-components';
+import styled, { StyledComponentBase } from 'styled-components';
 
-interface DefaultTheme {
-    width?: string;
-    height?: string;
-    display?: string;
-    alignItems ?: string;
-    justifyContent?: string;
-    flexDirection?: string;
-    color?: string;
-    padding: string;
-    fontSize?: string;
+interface IWrapper extends StyledComponentBase<"div", {}> {
+    header?: StyledComponentBase<"div", {}>,
+    Content?: StyledComponentBase<"div", {}>
+}
+interface IContent extends StyledComponentBase<"div", {}> {
+    Form?: StyledComponentBase<"form", {}>
+}
+interface IForm extends StyledComponentBase<"form", {}> {
+    input?: StyledComponentBase<"input", {}>
 }
 
-export const Wrapper = styled.div`
+export const Wrapper: IWrapper = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -21,20 +20,19 @@ export const Wrapper = styled.div`
   flex-direction: column;
   //background-image: @gradient1;
 `;
-
 Wrapper.header = styled.div`
   padding: 20px;
   font-size: 30px;
   //color: @color2;
 `;
 
-export const Content = styled.div`
+export const Content: IContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
-export const Form = styled.form`
+export const Form: IForm = styled.form`
   width: 300px;
   height: 300px;
   display: flex;
@@ -42,7 +40,6 @@ export const Form = styled.form`
   flex-direction: column;
   justify-content: space-around;
 `;
-
 Form.input = styled.input`
   height: 30px;
   font-size: 20px;

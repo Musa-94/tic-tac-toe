@@ -12,5 +12,5 @@ describe('SignUp snapshot', () => {
         const component = renderer(<SignUp {...props}/>);
 
         expect(component).toMatchSnapshot();
-    })
-})
+    });
+});

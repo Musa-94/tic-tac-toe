@@ -2,7 +2,7 @@ import React from 'react';
 import CustomButton from '../../components/customButton';
 import { withLocalization } from '../../lang/localization';
 import './signUpStyles.less';
-// import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import {
     Form,
     Content,

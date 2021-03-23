@@ -1,5 +1,17 @@
 import styled from 'styled-components';
 
+interface DefaultTheme {
+    width?: string;
+    height?: string;
+    display?: string;
+    alignItems ?: string;
+    justifyContent?: string;
+    flexDirection?: string;
+    color?: string;
+    padding: string;
+    fontSize?: string;
+}
+
 export const Wrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -40,4 +52,3 @@ Form.input = styled.input`
 
 Content.Form = Form;
 Wrapper.Content = Content;
-Wrapper.Container = Container;

@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUp snapshot should correctly render 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="container__header"
+  >
+    
+  </div>
+  <div
+    className="container__content"
+  >
+    <form
+      className="content"
+    >
+      <input
+        className="login input"
+        placeholder=""
+        required={true}
+        title=""
+        type="text"
+      />
+      <input
+        className="input"
+        placeholder=""
+        required={true}
+        title=""
+        type="password"
+      />
+      <input
+        className="input"
+        placeholder=""
+        required={true}
+        title=""
+        type="password"
+      />
+      <button
+        className="border-button"
+        type="submit"
+      >
+        
+      </button>
+    </form>
+  </div>
+</div>
+`;

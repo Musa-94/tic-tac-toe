@@ -1,13 +1,15 @@
 import React from 'react';
-import { Content,
-         Container,
-         SignInForm,
-         WrapperSignInPage } from './styledComponents';
+import {
+    Content,
+    Wrapper,
+    Container,
+    SignInForm
+} from './styledComponents';
 
 const SignInPage = props => {
     return (
-        <WrapperSignInPage data-at={'wrapper_sign-in-page'}>
-            <WrapperSignInPage.overlay data-at={'sign-in-page_overlay'}/>
+        <Wrapper data-at={'wrapper_sign-in-page'}>
+            <Wrapper.overlay data-at={'sign-in-page_overlay'}/>
             <Container data-at={'sign-in-page_container'}>
                 <Container.header data-at={'container_header'}/>
                 <Content data-at={'container_content'}>
@@ -21,7 +23,7 @@ const SignInPage = props => {
                     </SignInForm>
                 </Content>
             </Container>
-        </WrapperSignInPage>
+        </Wrapper>
     );
 }
 

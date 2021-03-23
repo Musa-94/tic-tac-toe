@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export const WrapperSignInPage = styled.div``;
+export const Wrapper = styled.div``;
 
-WrapperSignInPage.overlay = styled.div``;
+Wrapper.overlay = styled.div``;
 
 export const Container = styled.div``;
 
@@ -18,4 +18,4 @@ SignInForm.button = styled.button``;
 
 Container.Content = Content;
 Content.SignInForm = SignInForm;
-WrapperSignInPage.Container = Container;
+Wrapper.Container = Container;

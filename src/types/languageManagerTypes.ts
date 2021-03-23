@@ -1,4 +1,4 @@
-export interface InitialState {
+export interface LanguageState {
     lang: string;
 }
 

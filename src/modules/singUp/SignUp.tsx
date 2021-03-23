@@ -1,10 +1,13 @@
 import React from 'react';
 import CustomButton from '../../components/customButton';
-import { SingUpProps } from '../../types';
 import { withLocalization } from '../../lang/localization';
 import './signUpStyles.less';
 
-const SignUp: React.FC<SingUpProps> = (props: SingUpProps): React.ReactElement => {
+type TProps = {
+    t: Function
+};
+
+const SignUp: React.FC<TProps> = props => {
     const {
         t
     } = props;

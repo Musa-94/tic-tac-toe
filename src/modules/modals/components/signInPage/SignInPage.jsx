@@ -1,29 +1,29 @@
 import React from 'react';
+import {
+    Content,
+    Wrapper,
+    Container,
+    SignInForm
+} from './styledComponents';
 
 const SignInPage = props => {
     return (
-        <div className={'wrapper_sign-in-page'}>
-            <div className={'sign-in-page_overlay'}/>
-            <div className={'sign-in-page_container'}>
-                <div className={'container_header'}/>
-                <div className={'container_content'}>
-                    <form>
-                        <input type={'text'}
-                               placeholder={'Введите логин...'}
+        <Wrapper data-at={'wrapper_sign-in-page'}>
+            <Wrapper.overlay data-at={'sign-in-page_overlay'}/>
+            <Container data-at={'sign-in-page_container'}>
+                <Container.header data-at={'container_header'}/>
+                <Content data-at={'container_content'}>
+                    <SignInForm>
+                        <SignInForm.input type={'text'}
+                                          placeholder={'Введите логин...'}
                         />
-                        <input type={'password'}
-                               placeholder={'Введите пароль'}
+                        <SignInForm.button type={'submit'}
+                                           children={'Sign In'}
                         />
-                        <input type={'password'}
-                               placeholder={'Подтвердите пароль'}
-                        />
-                        <button type={'submit'}
-                                children={'Sign In'}
-                        />
-                    </form>
-                </div>
-            </div>
-        </div>
+                    </SignInForm>
+                </Content>
+            </Container>
+        </Wrapper>
     );
 }
 

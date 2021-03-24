@@ -1,6 +1,7 @@
 {
   "signUp": "Sign Up",
   "enterLogin": "Enter login",
+  "enterEmail": "Enter Email",
   "registration": "Registration",
   "enterPassword": "Enter password",
   "confirmThePassword": "Confirm the password"

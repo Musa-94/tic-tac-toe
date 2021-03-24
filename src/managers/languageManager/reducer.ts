@@ -1,11 +1,12 @@
 import constants from '../../constants';
-import { InitialState, ChangeLanguageAction } from '../../types';
+import { configSite } from '../../config';
+import { LanguageState, ChangeLanguageAction } from '../../types';
 
-const initialState: InitialState = {
-    lang: 'en',
+const initialState: LanguageState = {
+    lang: configSite.defaultLanguage,
 }
 
-export default (state = initialState, action: ChangeLanguageAction): InitialState => {
+export default (state = initialState, action: ChangeLanguageAction): LanguageState => {
     switch (action.type) {
         case constants.CHANGE_LANGUAGE_STORE:
             return {

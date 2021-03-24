@@ -1,12 +1,13 @@
-import constants from 'src/constants';
+import constants from '../../constants';
+import { LoginPageState } from '../../types/loginPageTypes';
 
-const initialState = {
+const initialState: LoginPageState = {
     isLoaded: false,
     currentUser: null,
     isAuthorized: false,
 };
 
-export default (state = initialState, action) => {
+export default (state = initialState, action: any): LoginPageState => {
     switch (action.type) {
         case constants.IS_LOADED:
             return {

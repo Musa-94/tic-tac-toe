@@ -1,6 +1,6 @@
 import { all, call } from 'redux-saga/effects';
-import watcherLoginPage from 'src/managers/loginPage/saga';
-import watchLanguageManager from 'src/managers/languageManager/saga.ts';
+import watcherLoginPage from '../managers/loginPageManager/saga';
+import watchLanguageManager from '../managers/languageManager/saga';
 
 const sagaList = [
     watcherLoginPage,

@@ -1,11 +1,14 @@
 import styled, { StyledComponentBase } from 'styled-components';
 
-interface IWrapper extends StyledComponentBase< any, any > {
-    Form?:any,
-    input?: any,
+interface IWrapper extends StyledComponentBase<'div', any> {
     header?: any,
-    Content?:any,
-    Wrapper?: any,
+    Content?: any,
+}
+interface IForm extends StyledComponentBase<any, any> {
+    input?: any
+}
+interface IContent extends StyledComponentBase<any, any> {
+    Form?: any,
 }
 
 export const Wrapper: IWrapper = styled.div`
@@ -15,21 +18,21 @@ export const Wrapper: IWrapper = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  //background-image: @gradient1;
+  background: azure;
 `;
 Wrapper.header = styled.div`
   padding: 20px;
   font-size: 30px;
-  //color: @color2;
+  color: black;
 `;
 
-export const Content: IWrapper = styled.div`
+export const Content: IContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
-export const Form: IWrapper = styled.form`
+export const Form: IForm = styled.form`
   width: 300px;
   height: 300px;
   display: flex;

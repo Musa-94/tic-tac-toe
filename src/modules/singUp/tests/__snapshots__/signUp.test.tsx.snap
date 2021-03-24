@@ -19,11 +19,13 @@ exports[`SignUp snapshot should correctly render 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  background: azure;
 }
 
 .c1 {
   padding: 20px;
   font-size: 30px;
+  color: black;
 }
 
 .c2 {
@@ -74,29 +76,29 @@ exports[`SignUp snapshot should correctly render 1`] = `
 >
   <div
     className="c1"
-    data-at="container__header"
+    data-at="wrapper_header"
   >
     
   </div>
   <div
     className="c2"
-    data-at="container__content"
+    data-at="wrapper_content"
   >
     <form
       className="c3"
-      data-at="content"
+      data-at="content_form"
     >
       <input
         className="c4"
-        data-at="login input"
+        data-at="form_input"
         placeholder=""
         required={true}
         title=""
-        type="text"
+        type="email"
       />
       <input
         className="c4"
-        data-at="input"
+        data-at="form_input"
         placeholder=""
         required={true}
         title=""
@@ -104,11 +106,11 @@ exports[`SignUp snapshot should correctly render 1`] = `
       />
       <input
         className="c4"
-        data-at="input"
+        data-at="form_input"
         placeholder=""
         required={true}
         title=""
-        type="password"
+        type="confirmThePassword"
       />
       <button
         className="border-button"

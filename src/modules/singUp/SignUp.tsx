@@ -1,6 +1,7 @@
 import React from 'react';
 import CustomButton from '../../components/customButton';
 import { withLocalization } from '../../lang/localization';
+import { configSite } from '../../config';
 import {
     Form,
     Content,
@@ -15,32 +16,26 @@ const SignUp: React.FC<TProps> = props => {
     const {
         t
     } = props;
+    const { signUp } = configSite.logInPage;
 
     return (
         <Wrapper data-at={'wrapper'}>
-            <Wrapper.header data-at={'container__header'}
+            <Wrapper.header data-at={'wrapper_header'}
                             children={t('registration')}
             />
-            <Wrapper.Content data-at={'container__content'}>
-                <Content.Form data-at={'content'}>
-                    <Form.input type={'text'}
-                                title={t('enterLogin')}
-                                required
-                                data-at={'login input'}
-                                placeholder={t('enterLogin')}
-                    />
-                    <Form.input type={'password'}
-                                title={t('enterPassword')}
-                                required
-                                data-at={'input'}
-                                placeholder={t('enterPassword')}
-                    />
-                    <Form.input type={'password'}
-                                title={t('confirmThePassword')}
-                                required
-                                data-at={'input'}
-                                placeholder={t('confirmThePassword')}
-                    />
+            <Wrapper.Content data-at={'wrapper_content'}>
+                <Content.Form data-at={'content_form'}>
+                    {
+                        signUp.map(({ id, type, placeholder }) =>
+                            <Form.input key={id}
+                                        type={type}
+                                        title={t(placeholder)}
+                                        required
+                                        data-at={'form_input'}
+                                        placeholder={t(placeholder)}
+                            />
+                        )
+                    }
                     <CustomButton
                         textTitle={t('signUp')}
                     />

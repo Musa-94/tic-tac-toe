@@ -10,8 +10,7 @@ export type TWindowSize = {
     clientHeight: number,
 }
 
-
-export interface WindowAction {
+export interface Action {
     type: string;
     payload: TWindowSize ;
 }

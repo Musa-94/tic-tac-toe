@@ -10,7 +10,6 @@ export interface TicTacToeState {
     playerSymbol: 'o' | 'x';
 }
 
-
 export type TPayloadSetSymbolOnGameBoard = {
     rowPosition: string;
     elementIndex: number;

@@ -2,12 +2,13 @@ import constants from '../../constants';
 import { TicTacToeState, Action } from '../../types';
 
 const initialState: TicTacToeState = {
+    isWin: false,
     gameBoard: {
-        0: ['-', '-', '-'],
-        1: ['-', '-', '-'],
-        2: ['-', '-', '-'],
+        0: ['', '', ''],
+        1: ['', '', ''],
+        2: ['', '', ''],
     },
-    playerSymbol: '-',
+    playerSymbol: 'x',
 }
 
 export default (state = initialState, action: Action) => {
@@ -17,10 +18,16 @@ export default (state = initialState, action: Action) => {
                 ...state,
                 gameBoard: action.payload,
             }
-        case constants.SET_CURRENT_PLAYER_SYMBOL: {
+        case constants.TOGGLE_CURRENT_PLAYER_SYMBOL: {
             return {
                 ...state,
-                playerSymbol: action.payload,
+                playerSymbol: state.playerSymbol === 'x' ? 'o' : 'x',
+            }
+        }
+        case constants.TOGGLE_IS_WIN: {
+            return {
+                ...state,
+                isWin: !state.isWin
             }
         }
         default:

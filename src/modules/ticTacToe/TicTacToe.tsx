@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { withLocalization } from '../../lang/localization';
 import { TGameBoard } from '../../types';
 import {
@@ -8,13 +8,25 @@ import {
 } from './styledComponents';
 
 type TProps = {
-    currentGameBoard: TGameBoard
+    isWin: boolean;
+    setPlayerSymbol: Function;
+    currentGameBoard: TGameBoard;
+    currentPlayerSymbol: string;
 }
 
 const TicTacToe: React.FC<TProps> = props => {
     const {
-        currentGameBoard
+        isWin,
+        setPlayerSymbol,
+        currentGameBoard,
+        currentPlayerSymbol,
     } = props;
+
+    console.log('Сейчас играет:', currentPlayerSymbol);
+
+    const onSetSymbol = useCallback((rowPosition: string, elementIndex: number) => {
+        !isWin && setPlayerSymbol({ rowPosition, elementIndex });
+    }, [setPlayerSymbol, isWin]);
 
     return (
         <GameBoard>
@@ -22,16 +34,20 @@ const TicTacToe: React.FC<TProps> = props => {
                 {
                     currentGameBoard[0].map((symbol, index) =>
                         <Symbol key={index}
-                                children={symbol === '-' ? '' : symbol}
+                                onClick={() => onSetSymbol('0', index)}
+                                children={symbol}
+                                elementIndex={index}
                         />
                     )
                 }
             </Row>
-            <Row>
+            <Row row={'mid'}>
             {
                 currentGameBoard[1].map((symbol, index) =>
                     <Symbol key={index}
-                            children={symbol === '-' ? '' : symbol}
+                            onClick={() => onSetSymbol('1', index)}
+                            children={symbol}
+                            elementIndex={index}
                     />
                 )
             }
@@ -40,13 +56,15 @@ const TicTacToe: React.FC<TProps> = props => {
             {
                 currentGameBoard[2].map((symbol, index) =>
                     <Symbol key={index}
-                            children={symbol === '-' ? '' : symbol}
+                            onClick={() => onSetSymbol('2', index)}
+                            children={symbol}
+                            elementIndex={index}
                     />
                 )
             }
             </Row>
         </GameBoard>
-    )
-}
+    );
+};
 
 export default React.memo(withLocalization()(TicTacToe));

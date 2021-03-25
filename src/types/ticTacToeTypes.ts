@@ -1,15 +1,27 @@
 export type TGameBoard = {
-    0: Array<'-' | '0' | 'x'>,
-    1: Array<'-' | '0' | 'x'>,
-    2: Array<'-' | '0' | 'x'>,
+    0: Array<'' | 'o' | 'x'>,
+    1: Array<'' | 'o' | 'x'>,
+    2: Array<'' | 'o' | 'x'>,
 }
 
 export interface TicTacToeState {
-    gameBoard: TGameBoard,
-    playerSymbol: '-' | '0' | 'x'
+    isWin: boolean;
+    gameBoard: TGameBoard;
+    playerSymbol: 'o' | 'x';
+}
+
+
+export type TPayloadSetSymbolOnGameBoard = {
+    rowPosition: string;
+    elementIndex: number;
 }
 
 export type Action = {
     type: string;
     payload?: TGameBoard | string;
+}
+
+export type TActionSetSymbolOnGameBoard = {
+    type: string;
+    payload: TPayloadSetSymbolOnGameBoard;
 }

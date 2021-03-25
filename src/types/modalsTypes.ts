@@ -1,9 +1,5 @@
 export interface ModalsState {
-    [modalType: string]: {
-        isShow: false,
-        context: null,
-        withBlur: true,
-    }
+    [modalType: string]: ModalData,
 }
 
 export interface ModalData {
@@ -13,5 +9,5 @@ export interface ModalData {
 }
 
 export interface ModalContext {
-    message: string
+    message: string,
 }

@@ -1,12 +1,14 @@
-import constants from 'src/constants';
+import constants from '../../constants';
 import { getCurrentWindowSize } from './logic';
+import { WindowState, WindowAction } from '../../types';
 
-const initialState = {
+
+const initialState: WindowState = {
     resolution: constants.RESOLUTION_OTHER,
     windowSize: getCurrentWindowSize(),
 }
 
-export default (state = initialState, action) => {
+export default (state = initialState, action: WindowAction) => {
     switch (action.type) {
         case constants.SET_PLATFORM_RESOLUTION_STORE:
             return {

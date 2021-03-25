@@ -2,7 +2,6 @@ import constants from '../../constants';
 import { getCurrentWindowSize } from './logic';
 import { WindowState, Action } from '../../types';
 
-
 const initialState: WindowState = {
     resolution: constants.RESOLUTION_OTHER,
     windowSize: getCurrentWindowSize(),

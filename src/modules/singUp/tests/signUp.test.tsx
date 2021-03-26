@@ -9,7 +9,7 @@ const props = {
 
 describe('SignUp snapshot', () => {
     it('should correctly render', () => {
-        //@ts-ignore TODO remove
+        //@ts-ignore TODO remove when declare
         const component = renderer(<SignUp {...props}/>);
 
         expect(component).toMatchSnapshot();

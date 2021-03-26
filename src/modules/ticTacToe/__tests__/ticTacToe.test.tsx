@@ -2,14 +2,14 @@ import React from 'react';
 import TicTacToe from '../TicTacToe';
 
 const props = {
-  isWin: false,
-  setPlayerSymbol: () => {},
-  currentGameBoard: {
-    0: ['', '', ''],
-    1: ['', '', ''],
-    2: ['', '', '']
-  },
-  currentPlayerSymbol: 'x'
+    isWin: false,
+    setPlayerSymbol: () => {},
+    currentGameBoard: {
+        0: ['', '', ''],
+        1: ['', '', ''],
+        2: ['', '', '']
+    },
+    currentPlayerSymbol: 'x'
 };
 
 describe('TicTacToe snapshot', () => {

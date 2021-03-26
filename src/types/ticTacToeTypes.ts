@@ -1,13 +1,13 @@
 export type TGameBoard = {
-    0: Array<'' | 'o' | 'x'>,
-    1: Array<'' | 'o' | 'x'>,
-    2: Array<'' | 'o' | 'x'>,
+    0: Array<string>,
+    1: Array<string>,
+    2: Array<string>,
 }
 
 export interface TicTacToeState {
     isWin: boolean;
     gameBoard: TGameBoard;
-    playerSymbol: 'o' | 'x';
+    playerSymbol: string;
 }
 
 export type TPayloadSetSymbolOnGameBoard = {

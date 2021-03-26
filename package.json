@@ -8,7 +8,7 @@
     "start": "webpack-dev-server",
     "build:prod": "webpack --mode=production",
     "tests": "jest",
-    "coverege": "jest --coverage",
+    "coverage": "jest --coverage",
     "updateSnapshot": "jest --updateSnapshot"
   },
   "husky": {
@@ -118,6 +118,7 @@
       "node_modules",
       "bower_components",
       "shared"
-    ]
+    ],
+    "modulePathIgnorePatterns": ["<rootDir>/src/constants", "<rootDir>/src/testsUtils"]
   }
 }

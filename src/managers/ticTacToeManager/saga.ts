@@ -5,8 +5,8 @@ import * as actions from './actions';
 import * as selectors from './selectors';
 import { checkIsWinGameBoard } from '../../buisnessLogic';
 
-export default function* ticTacToeManager() {
-    yield takeEvery(constants.SET_NEW_SYMBOL_ON_GAME_BOARD, handleGameBoard)
+export default function* watchTicTacToeManager() {
+    yield takeEvery(constants.SET_NEW_SYMBOL_ON_GAME_BOARD, handleGameBoard);
 }
 
 export function* handleGameBoard(action: TActionSetSymbolOnGameBoard) {
@@ -16,7 +16,9 @@ export function* handleGameBoard(action: TActionSetSymbolOnGameBoard) {
         const currentGameBoard: TGameBoard = yield select(selectors.getCurrentGameBoard);
         const currentPlayerSymbol: string = yield select(selectors.getCurrentPlayerSymbol);
 
-        currentGameBoard[rowPosition][elementIndex] === '' &&
+        // @ts-ignore //TODO remove when clear wtf
+        (currentGameBoard[rowPosition][elementIndex]) === '' &&
+        // @ts-ignore
         (currentGameBoard[rowPosition][elementIndex] = currentPlayerSymbol);
 
         yield call(checkIsWin, currentGameBoard, currentPlayerSymbol);

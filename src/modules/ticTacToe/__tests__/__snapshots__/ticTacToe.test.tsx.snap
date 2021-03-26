@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TicTacToe snapshot should correctly render 1`] = `
+.c0 {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c1 {
+  width: 100%;
+  height: 33.3%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 {
+  width: 100%;
+  height: 33.3%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.c2 {
+  width: 33.3%;
+  height: 100%;
+  font-size: 10em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #FFC600;
+}
+
+.c2:hover {
+  opacity: 0.6;
+}
+
+.c3 {
+  width: 33.3%;
+  height: 100%;
+  font-size: 10em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #FFC600;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.c3:hover {
+  opacity: 0.6;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="c3"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="c2"
+      onClick={[Function]}
+    >
+      
+    </div>
+  </div>
+  <div
+    className="c4"
+  >
+    <div
+      className="c2"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="c3"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="c2"
+      onClick={[Function]}
+    >
+      
+    </div>
+  </div>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="c3"
+      onClick={[Function]}
+    >
+      
+    </div>
+    <div
+      className="c2"
+      onClick={[Function]}
+    >
+      
+    </div>
+  </div>
+</div>
+`;

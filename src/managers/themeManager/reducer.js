@@ -2,7 +2,7 @@ import constants from 'src/constants';
 
 const initialState = {
     coefficient: 1,
-    currentTheme: 'Night'
+    currentTheme: 'Dark'
 }
 
 export default (state = initialState, action) => {

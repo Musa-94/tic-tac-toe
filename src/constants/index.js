@@ -1,10 +1,12 @@
-const constants = {};
-
-export default Object.defineProperties(constants, {
+export default Object.defineProperties({}, {
    IS_LOADED                        : { value: 'is_loaded', writable: false },
    REQUEST_SEND                     : { value: 'request_send', writable: false },
    IS_AUTHORIZED                    : { value: 'is_authorized_store', writable: false },
+   TOGGLE_IS_WIN                    : { value: 'toggle_is_win', writable: false },
    SET_CURRENT_USER_STORE           : { value: 'set_current_user_store', writable: false },
+   TOGGLE_CURRENT_PLAYER_SYMBOL     : { value: 'toggle_current_player_symbol', writable: false },
+   SET_CURRENT_GAME_BOARD_STORE     : { value: 'set_current_game_board_store', writable: false },
+   SET_NEW_SYMBOL_ON_GAME_BOARD     : { value: 'set_new_symbol_on_game_board', writable: false },
 
    SIGN_UP_MODAL_WINDOW_TYPE        : { value: 'sign_up_modal_window_type', writable: false },
    SIGN_IN_MODAL_WINDOW_TYPE        : { value: 'sign_in_modal_window_type', writable: false },

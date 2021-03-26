@@ -1,4 +1,5 @@
 import React from 'react';
+import mockStore from './store';
 import styled from 'styled-components';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
@@ -13,3 +14,4 @@ global.mount = mount;
 global.styled = styled;
 global.shallow = shallow;
 global.renderer = styledComponent => renderer.create(styledComponent).toJSON();
+global.mockStore = mockStore;

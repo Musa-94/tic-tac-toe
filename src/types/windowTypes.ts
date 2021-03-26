@@ -4,13 +4,13 @@ export interface WindowState {
 }
 
 export type TWindowSize = {
-    width: number,
-    height: number,
-    clientWidth: number,
-    clientHeight: number,
+    width: number;
+    height: number;
+    clientWidth: number;
+    clientHeight: number;
 }
 
 export interface Action {
     type: string;
-    payload: TWindowSize ;
+    payload: TWindowSize;
 }

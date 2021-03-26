@@ -1,11 +1,12 @@
-import constants from 'src/constants';
+import constants from '../../constants';
+import { ThemeState, ThemeAction } from '../../types';
 
-const initialState = {
+const initialState: ThemeState = {
     coefficient: 1,
     currentTheme: 'Dark'
 }
 
-export default (state = initialState, action) => {
+export default (state = initialState, action: ThemeAction) => {
     switch (action.type) {
         case constants.SET_RESOLUTION_COEFFICIENT_STORE:
             return {

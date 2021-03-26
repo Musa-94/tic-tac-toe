@@ -1,4 +1,10 @@
 export interface ThemeState {
     coefficient: number;
-    currentTheme: 'Dark' | 'Light'
+    currentTheme: string;
 }
+
+export interface ThemeAction {
+    type: string;
+    payload?: number | string;
+}
+

@@ -1,19 +1,33 @@
 import React from 'react';
-import './buttonStyles.less';
+import { Button } from './styledComponents';
 
 type TProps = {
-    textTitle: string;
+    fontSize?: number,
+    textColor?: string,
+    textTitle?: string;
+    borderColor?: string,
+    borderWidth?: number,
+    backgroundColor?: string,
 }
 
 const CustomButton: React.FC<TProps> = props => {
     const {
+        fontSize = 20,
         textTitle = 'Button',
+        textColor,
+        borderColor,
+        borderWidth,
+        backgroundColor,
     } = props;
 
     return (
-        <button type={'submit'}
+        <Button type={'submit'}
                 children={textTitle}
-                className={'border-button'}
+                fontSize={fontSize}
+                textColor={textColor}
+                borderColor={borderColor}
+                borderWidth={borderWidth}
+                backgroundColor={backgroundColor}
         />
     );
 };

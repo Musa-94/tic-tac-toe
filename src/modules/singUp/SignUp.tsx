@@ -1,5 +1,5 @@
 import React from 'react';
-import CustomButton from '../../components/customButton';
+import { CustomButton } from '../../components';
 import { withLocalization } from '../../lang/localization';
 import { configSite } from '../../config';
 import {

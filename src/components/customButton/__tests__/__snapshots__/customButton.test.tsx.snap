@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomButton snapshot should correctly render 1`] = `
+.c0 {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+  color: red;
+  border-color: black;
+  background: green;
+}
+
+<button
+  className="c0"
+  fontSize={20}
+  type="submit"
+>
+  Button
+</button>
+`;

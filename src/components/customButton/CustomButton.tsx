@@ -7,6 +7,7 @@ type TProps = {
     textTitle?: string;
     borderColor?: string,
     borderWidth?: number,
+    borderStyle?: string,
     backgroundColor?: string,
 }
 
@@ -17,6 +18,7 @@ const CustomButton: React.FC<TProps> = props => {
         textColor,
         borderColor,
         borderWidth,
+        borderStyle,
         backgroundColor,
     } = props;
 
@@ -27,6 +29,7 @@ const CustomButton: React.FC<TProps> = props => {
                 textColor={textColor}
                 borderColor={borderColor}
                 borderWidth={borderWidth}
+                borderStyle={borderStyle}
                 backgroundColor={backgroundColor}
         />
     );

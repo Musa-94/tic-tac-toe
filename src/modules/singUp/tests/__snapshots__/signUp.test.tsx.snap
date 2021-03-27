@@ -1,6 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SignUp snapshot should correctly render 1`] = `
+.c5 {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+}
+
 .c0 {
   width: 100%;
   height: 100%;
@@ -113,7 +121,8 @@ exports[`SignUp snapshot should correctly render 1`] = `
         type="confirmThePassword"
       />
       <button
-        className="border-button"
+        className="c5"
+        fontSize={20}
         type="submit"
       >
         

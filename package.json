@@ -119,6 +119,9 @@
       "bower_components",
       "shared"
     ],
-    "modulePathIgnorePatterns": ["<rootDir>/src/constants", "<rootDir>/src/testsUtils"]
+    "modulePathIgnorePatterns": [
+      "<rootDir>/src/constants",
+      "<rootDir>/src/testsUtils"
+    ]
   }
 }

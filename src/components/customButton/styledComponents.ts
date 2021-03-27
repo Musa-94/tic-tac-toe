@@ -15,7 +15,7 @@ export const Button = styled.button<IButton>`
     ${props => props.fontSize &&  `font-size: ${props.fontSize}px`};
     cursor: pointer;
     padding: 5px;
-    ${props => props.borderStyle &&  `border-color: ${props.borderStyle}`};
+    ${props => props.borderStyle &&  `border-style: ${props.borderStyle}`};
     ${props => props.textColor &&  `color: ${props.textColor}`};
     ${props => props.borderColor &&  `border-color: ${props.borderColor}`};
     ${props => props.borderWidth &&  `border-width: ${props.borderWidth}px`};

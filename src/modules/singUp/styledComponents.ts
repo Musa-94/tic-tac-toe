@@ -5,7 +5,8 @@ interface IWrapper extends StyledComponentBase<'div', any> {
     Content?: any,
 }
 interface IForm extends StyledComponentBase<any, any> {
-    input?: any
+    input?: any,
+    ButtonWrapper?: any
 }
 interface IContent extends StyledComponentBase<any, any> {
     Form?: any,
@@ -40,11 +41,16 @@ export const Form: IForm = styled.form`
   flex-direction: column;
   justify-content: space-around;
 `;
+
 Form.input = styled.input`
   height: 30px;
   font-size: 20px;
   outline: none;
   padding: 10px;
+`;
+
+Form.ButtonWrapper = styled.div`
+  
 `;
 
 Content.Form = Form;

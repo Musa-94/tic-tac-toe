@@ -7,7 +7,7 @@ export default function* watchLanguageManager() {
     yield takeEvery(constants.CHANGE_LANGUAGE_STORE, handleChangeLanguage)
 }
 
-function* handleChangeLanguage(action: ChangeLanguageAction) {
+export function* handleChangeLanguage(action: ChangeLanguageAction) {
     if (!action.payload) {
         return;
     }

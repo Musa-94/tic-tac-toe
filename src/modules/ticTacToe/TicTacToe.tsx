@@ -42,26 +42,26 @@ const TicTacToe: React.FC<TProps> = props => {
                 }
             </Row>
             <Row row={'mid'}>
-            {
-                currentGameBoard[1].map((symbol, index) =>
-                    <Symbol key={index}
-                            onClick={() => onSetSymbol('1', index)}
-                            children={symbol}
-                            elementIndex={index}
-                    />
-                )
-            }
+                {
+                    currentGameBoard[1].map((symbol, index) =>
+                        <Symbol key={index}
+                                onClick={() => onSetSymbol('1', index)}
+                                children={symbol}
+                                elementIndex={index}
+                        />
+                    )
+                }
             </Row>
             <Row>
-            {
-                currentGameBoard[2].map((symbol, index) =>
-                    <Symbol key={index}
-                            onClick={() => onSetSymbol('2', index)}
-                            children={symbol}
-                            elementIndex={index}
-                    />
-                )
-            }
+                {
+                    currentGameBoard[2].map((symbol, index) =>
+                        <Symbol key={index}
+                                onClick={() => onSetSymbol('2', index)}
+                                children={symbol}
+                                elementIndex={index}
+                        />
+                    )
+                }
             </Row>
         </GameBoard>
     );

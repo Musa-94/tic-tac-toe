@@ -10,7 +10,6 @@ type TProps = {
     borderWidth?: number,
     borderStyle?: string,
     handleClick?: React.MouseEventHandler<HTMLButtonElement>,
-    handleSubmit?: React.FormEventHandler<HTMLButtonElement>,
     backgroundColor?: string,
 }
 
@@ -24,7 +23,6 @@ const CustomButton: React.FC<TProps> = props => {
         borderWidth,
         borderStyle,
         handleClick,
-        handleSubmit,
         backgroundColor,
     } = props;
 
@@ -32,7 +30,6 @@ const CustomButton: React.FC<TProps> = props => {
         <Button type={type}
                 children={textTitle}
                 onClick={handleClick}
-                onSubmit={handleSubmit}
                 fontSize={fontSize}
                 textColor={textColor}
                 borderColor={borderColor}

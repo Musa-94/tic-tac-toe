@@ -123,7 +123,7 @@ exports[`SignUp snapshot should correctly render 1`] = `
       <button
         className="c5"
         fontSize={20}
-        type="submit"
+        type="button"
       >
         
       </button>

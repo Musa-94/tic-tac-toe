@@ -8,7 +8,6 @@ import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 
 configure({ adapter: new Adapter() });
 
-
 global.React = React;
 global.mount = mount;
 global.styled = styled;

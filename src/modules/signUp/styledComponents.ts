@@ -41,17 +41,13 @@ export const Form: IForm = styled.form`
   flex-direction: column;
   justify-content: space-around;
 `;
-
 Form.input = styled.input`
   height: 30px;
   font-size: 20px;
   outline: none;
   padding: 10px;
 `;
-
-Form.ButtonWrapper = styled.div`
-  
-`;
+Form.ButtonWrapper = styled.div``;
 
 Content.Form = Form;
 Wrapper.Content = Content;

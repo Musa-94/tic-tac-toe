@@ -28,8 +28,8 @@ const CustomButton: React.FC<TProps> = props => {
 
     return (
         <Button type={type}
-                children={textTitle}
                 onClick={handleClick}
+                children={textTitle}
                 fontSize={fontSize}
                 textColor={textColor}
                 borderColor={borderColor}

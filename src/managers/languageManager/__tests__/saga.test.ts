@@ -18,18 +18,17 @@ describe('languageManager saga', () => {
 
     describe('handleChangeLanguage try', () => {
         it('should call changeLanguage', () => {
-        const action = {
-            type: 'change_language_store',
-            payload: 'ru'
-        };
-        const generator = saga.handleChangeLanguage(action);
+            const action = {
+                type: 'change_language_store',
+                payload: 'ru'
+            };
+            const generator = saga.handleChangeLanguage(action);
 
             // @ts-ignore
             expect(generator.next().value).toEqual(call(changeLanguage, action.payload))
         });
 
-        it('should finished when action do not have payload', () => {
-            
+        it('should finished when action do not have payload', () => {   
             const action = {
                 type: 'change_language_store',
             };

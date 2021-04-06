@@ -13,23 +13,23 @@ describe('languageManager reducer', () => {
     it('should return the initial state', () => {
         const mockAction = { 
             type: '',
-            payload: 'ru'
         };
-
+        
+        // @ts-ignore
         expect(reducer(undefined, mockAction)).toStrictEqual(mockState);
     });
 
     it('should handle CHANGE_LANGUAGE_STORE', () => {
+        const action = {
+            type: 'change_language_store',
+            payload: 'ru'
+        };
+
         const expected = {
             ...mockState,
             lang: 'ru'
         };
 
-        expect(
-            reducer(mockState, {
-                type: 'change_language_store',
-                payload: 'ru'
-            })
-        ).toStrictEqual(expected)
+        expect(reducer(mockState, action)).toStrictEqual(expected);
     });
 });

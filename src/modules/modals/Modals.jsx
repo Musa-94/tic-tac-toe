@@ -6,6 +6,7 @@ import SignUpModalWindow from './components/SignUpModalWindow';
 const Modals = props => {
     const {
         modals,
+        coefficient,
         closeModalWindow,
     } = props;
 
@@ -17,13 +18,13 @@ const Modals = props => {
     const modalStyles = useMemo(() => ({
         content: {
             ...styles.content,
-            width: 500,
+            width: 500 * coefficient,
         },
         overlay: {
             ...styles.overlay,
             background: 'rgba(0,0,0,0.5)',
         }
-    }), [styles]);
+    }), [styles, coefficient]);
 
     return (
         <>

@@ -9,19 +9,26 @@ const initialState: WindowState = {
 
 export default (state = initialState, action: WindowAction) => {
     switch (action.type) {
-        case constants.SET_PLATFORM_RESOLUTION_STORE:
+        case constants.ACTION_TYPES.SET_PLATFORM_RESOLUTION_STORE:
             return {
                 ...state,
                 resolution: action.payload,
             };
-        case constants.SET_WINDOW_SIZE_STORE: {
+        case constants.ACTION_TYPES.SET_WINDOW_SIZE_STORE: {
+            const {
+                width,
+                height,
+                clientWidth,
+                clientHeight,
+            } = action.payload;
+
             return {
                 ...state,
                 windowSize: {
-                    width: action.payload.width,
-                    height: action.payload.height,
-                    clientWidth: action.payload.clientWidth,
-                    clientHeight: action.payload.clientHeight,
+                    width,
+                    height,
+                    clientWidth,
+                    clientHeight,
                 }
             }
         }

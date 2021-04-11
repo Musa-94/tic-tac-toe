@@ -8,12 +8,12 @@ const initialState: ThemeState = {
 
 export default (state = initialState, action: ThemeAction) => {
     switch (action.type) {
-        case constants.SET_RESOLUTION_COEFFICIENT_STORE:
+        case constants.ACTION_TYPES.SET_RESOLUTION_COEFFICIENT_STORE:
             return {
                 ...state,
                 coefficient: action.payload,
             };
-        case constants.SET_CURRENT_THEME_STORE:
+        case constants.ACTION_TYPES.SET_CURRENT_THEME_STORE:
             return {
                 ...state,
                 currentTheme: action.payload

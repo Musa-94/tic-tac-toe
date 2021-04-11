@@ -21,8 +21,8 @@ export const Wrapper: IWrapper = styled.div`
   background: azure;
 `;
 Wrapper.header = styled.div`
-  padding: 20px;
-  font-size: 30px;
+  padding: ${props => props.theme.coefficient * 20}px;
+  font-size: ${props => props.theme.coefficient * 30}px;
   color: black;
 `;
 
@@ -33,18 +33,18 @@ export const Content: IContent = styled.div`
 `;
 
 export const Form: IForm = styled.form`
-  width: 300px;
-  height: 300px;
+  width: ${props => props.theme.coefficient * 300}px;
+  height: ${props => props.theme.coefficient * 300}px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
 `;
 Form.input = styled.input`
-  height: 30px;
-  font-size: 20px;
+  height: ${props => props.theme.coefficient * 30}px;
+  font-size: ${props => props.theme.coefficient * 20}px;
   outline: none;
-  padding: 10px;
+  padding: ${props => props.theme.coefficient * 10}px;
 `;
 
 Content.Form = Form;

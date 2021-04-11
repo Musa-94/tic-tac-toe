@@ -7,19 +7,26 @@ import {
     Content,
     Wrapper,
 } from './styledComponents';
+import { ThemeProvider } from 'styled-components';
 
 type TProps = {
-    t: Function
+    t: Function,
+    coefficient: number,
 };
 
 const SignUp: React.FC<TProps> = props => {
     const {
-        t
+        t,
+        coefficient,
     } = props;
     const { signUp } = configSite.logInPage;
+    const theme = {
+        coefficient
+    }
 
     return (
-        <Wrapper data-at={'wrapper'}>
+        <ThemeProvider theme={theme}>
+            <Wrapper data-at={'wrapper'}>
             <Wrapper.header data-at={'wrapper_header'}
                             children={t('registration')}
             />
@@ -42,6 +49,7 @@ const SignUp: React.FC<TProps> = props => {
                 </Content.Form>
             </Wrapper.Content>
         </Wrapper>
+        </ThemeProvider>
     );
 };
 

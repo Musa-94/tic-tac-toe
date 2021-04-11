@@ -6,8 +6,6 @@ let isInited: boolean = false;
 export function init(): void {
     if (!isInited) {
         window.addEventListener('resize', onResizeListener, false);
-        // window.addEventListener('keydown', onKeyDownListener, false); TODO uncomment when create listener keydown
-        // window.addEventListener('focus', onFocusListener, false);
         isInited = true;
     }
 }
@@ -20,31 +18,8 @@ export function onResizeListener(): void {
     }
 }
 
-// export function subOnWindowResizeEvent(callback: Function): void | boolean {
-//     if (!callback || !(typeof callback === 'function')) {
-//         return false;
-//     }
-//
-//     onResizeCallbacks.push(callback);
-// }
-
 export function returnResizeCallbacks(): Function[] {
     return onResizeCallbacks;
-}
-
-// export function unsubFromWindowResizeEvent(callback: Function): void {
-//     for (let key in onResizeCallbacks) {
-//         if (onResizeCallbacks[key] === callback) {
-//             onResizeCallbacks.splice(key, 1);
-//             break;
-//         }
-//     }
-// }
-
-export function clearAllArraysCallbacks() {
-    onResizeCallbacks = [];
-    // onKeyDownCallbacks = [];TODO uncomment when implement this logic
-    // onFocusCallbacks = [];
 }
 
 export function getCurrentResolution(): string {

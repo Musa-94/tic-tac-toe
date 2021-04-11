@@ -59,15 +59,8 @@ export function* setWindowSize(windowSize) {
 }
 
 export function* checkingResizingPlatform() {
-    //TODO uncomment when will be support mobile resolution
-    // const isMobile = yield select(selectors.getIsMobile);
-
     const platformResolution = yield select(selectors.getPlatformResolution);
     const currentResolution =  yield apply(windowManager, windowManager.getCurrentResolution);
-
-    console.log('currentResolution', currentResolution);
-    //TODO uncomment when will be support mobile resolution
-        // isMobile ? yield apply(windowManager, windowManager.getCurrentResolutionMobile) :
 
     if (platformResolution !== currentResolution) {
         yield put(actions.setPlatformResolutionStore(currentResolution));

@@ -1,7 +1,6 @@
 export default Object.defineProperties({}, {
     WINDOW_RESIZE                    : { value: 'window_resize', writable: false },
 
-
     CHANGE_LANGUAGE_STORE            : { value: 'change_language_store', writable: false },
 
     SET_WINDOW_SIZE_STORE            : { value: 'set_window_size_store', writable: false },

@@ -10,7 +10,6 @@ import { getCurrentWindowSize } from './logic';
 let windowManagerChannel;
 
 export default function* watchWindowManager() {
-    yield call(windowManager.init);
     yield throttle(250, constants.ACTION_TYPES.WINDOW_RESIZE, handleWindowResize);
     const currentWindowSize = yield call(getCurrentWindowSize);
     yield call(setWindowSize, currentWindowSize);
@@ -61,6 +60,8 @@ export function* setWindowSize(windowSize) {
 export function* checkingResizingPlatform() {
     const platformResolution = yield select(selectors.getPlatformResolution);
     const currentResolution =  yield apply(windowManager, windowManager.getCurrentResolution);
+
+    console.log('currentResolution', currentResolution);
 
     if (platformResolution !== currentResolution) {
         yield put(actions.setPlatformResolutionStore(currentResolution));

@@ -1,27 +1,5 @@
 import constants from '../../constants';
 
-let onResizeCallbacks: Function[] = [];
-let isInited: boolean = false;
-
-export function init(): void {
-    if (!isInited) {
-        window.addEventListener('resize', onResizeListener, false);
-        isInited = true;
-    }
-}
-
-export function onResizeListener(): void {
-    for (let callback of onResizeCallbacks) {
-        if (callback && (typeof callback === 'function')) {
-            callback();
-        }
-    }
-}
-
-export function returnResizeCallbacks(): Function[] {
-    return onResizeCallbacks;
-}
-
 export function getCurrentResolution(): string {
     let resolutionType = constants.RESOLUTION_OTHER;
 

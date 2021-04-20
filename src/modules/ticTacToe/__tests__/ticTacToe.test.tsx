@@ -8,9 +8,9 @@ const props = {
     currentGameBoard: {
         0: ['', '', ''],
         1: ['', '', ''],
-        2: ['', '', ''],
+        2: ['', '', '']
     },
-    currentPlayerSymbol: 'x',
+    currentPlayerSymbol: 'x'
 };
 
 describe('TicTacToe snapshot', () => {

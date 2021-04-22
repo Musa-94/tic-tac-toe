@@ -36,9 +36,11 @@ const SignUp: React.FC<TProps> = props => {
                             />
                         )
                     }
-                    <CustomButton
-                        textTitle={t('signUp')}
-                    />
+                    <Form.ButtonWrapper>
+                        <CustomButton
+                            textTitle={t('signUp')}
+                        />
+                    </Form.ButtonWrapper>
                 </Content.Form>
             </Wrapper.Content>
         </Wrapper>

@@ -120,13 +120,17 @@ exports[`SignUp snapshot should correctly render 1`] = `
         title=""
         type="confirmThePassword"
       />
-      <button
-        className="c5"
-        fontSize={20}
-        type="submit"
+      <div
+        className=""
       >
-        
-      </button>
+        <button
+          className="c5"
+          fontSize={20}
+          type="button"
+        >
+          
+        </button>
+      </div>
     </form>
   </div>
 </div>

@@ -61,8 +61,6 @@ export function* checkingResizingPlatform() {
     const platformResolution = yield select(selectors.getPlatformResolution);
     const currentResolution =  yield apply(windowManager, windowManager.getCurrentResolution);
 
-    console.log('currentResolution', currentResolution);
-
     if (platformResolution !== currentResolution) {
         yield put(actions.setPlatformResolutionStore(currentResolution));
     }

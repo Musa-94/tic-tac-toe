@@ -7,6 +7,7 @@ import * as selectors from './selectors';
 
 const mapStateToProps = state => ({
     modals: selectors.getModals(state),
+    coefficient: selectors.getCoefficient(state),
 });
 
 const mapDispatchToProps = dispatch => ({

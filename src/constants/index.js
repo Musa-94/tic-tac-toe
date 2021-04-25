@@ -1,4 +1,8 @@
+import actionTypes from './actionTypes';
+
 export default Object.defineProperties({}, {
+   ACTION_TYPES                     : { value: actionTypes, writable: false },
+
    IS_LOADED                        : { value: 'is_loaded', writable: false },
    REQUEST_SEND                     : { value: 'request_send', writable: false },
    IS_AUTHORIZED                    : { value: 'is_authorized_store', writable: false },
@@ -18,13 +22,7 @@ export default Object.defineProperties({}, {
    RESOLUTION_8K                    : { value: 'resolution_8k', writable: false },
    RESOLUTION_QHD                   : { value: 'resolution_qhd', writable: false },
    RESOLUTION_OTHER                 : { value: 'resolution_other', writable: false },
+   RESOLUTION_MOBILE                : { value: 'resolution_mobile', writable: false },
    RESOLUTION_FULL_HD               : { value: 'resolution_full_hd', writable: false },
    RESOLUTION_QHD_PLUS              : { value: 'resolution_qhd_plus', writable: false },
-
-   CHANGE_LANGUAGE_STORE            : { value: 'change_language_store', writable: false },
-
-   SET_WINDOW_SIZE_STORE            : { value: 'set_window_size_store', writable: false },
-   SET_CURRENT_THEME_STORE          : { value: 'set_current_theme_store', writable: false },
-   SET_PLATFORM_RESOLUTION_STORE    : { value: 'set_platform_resolution_store', writable: false },
-   SET_RESOLUTION_COEFFICIENT_STORE : { value: 'set_resolution_coefficient_store', writable: false },
 });

@@ -8,7 +8,7 @@ const initialState: LanguageState = {
 
 export default (state = initialState, action: ChangeLanguageAction): LanguageState => {
     switch (action.type) {
-        case constants.CHANGE_LANGUAGE_STORE:
+        case constants.ACTION_TYPES.CHANGE_LANGUAGE_STORE:
             return {
                 ...state,
                 lang: action.payload

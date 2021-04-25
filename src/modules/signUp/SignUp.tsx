@@ -7,43 +7,49 @@ import {
     Content,
     Wrapper,
 } from './styledComponents';
+import { ThemeProvider } from 'styled-components';
 
 type TProps = {
-    t: Function
+    t: Function,
+    coefficient: number,
 };
 
 const SignUp: React.FC<TProps> = props => {
     const {
-        t
+        t,
+        coefficient,
     } = props;
     const { signUp } = configSite.logInPage;
+    const theme = { //TODO remove when create themes
+        coefficient
+    };
 
     return (
-        <Wrapper data-at={'wrapper'}>
-            <Wrapper.header data-at={'wrapper_header'}
-                            children={t('registration')}
-            />
-            <Wrapper.Content data-at={'wrapper_content'}>
-                <Content.Form data-at={'content_form'}>
-                    {
-                        signUp.map(({ id, type, placeholder }) =>
-                            <Form.input key={id}
-                                        type={type}
-                                        title={t(placeholder)}
-                                        required
-                                        data-at={'form_input'}
-                                        placeholder={t(placeholder)}
-                            />
-                        )
-                    }
-                    <Form.ButtonWrapper>
+        <ThemeProvider theme={theme}>
+            <Wrapper data-at={'wrapper'}>
+                <Wrapper.header data-at={'wrapper_header'}
+                                children={t('registration')}
+                />
+                <Wrapper.Content data-at={'wrapper_content'}>
+                    <Content.Form data-at={'content_form'}>
+                        {
+                            signUp.map(({ id, type, placeholder }) =>
+                                <Form.input key={id}
+                                            type={type}
+                                            title={t(placeholder)}
+                                            data-at={'form_input'}
+                                            required
+                                            placeholder={t(placeholder)}
+                                />
+                            )
+                        }
                         <CustomButton
                             textTitle={t('signUp')}
                         />
-                    </Form.ButtonWrapper>
-                </Content.Form>
-            </Wrapper.Content>
-        </Wrapper>
+                    </Content.Form>
+                </Wrapper.Content>
+            </Wrapper>
+        </ThemeProvider>
     );
 };
 

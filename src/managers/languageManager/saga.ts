@@ -4,7 +4,7 @@ import { changeLanguage } from '../../lang/localization';
 import { ChangeLanguageAction } from '../../types';
 
 export default function* watchLanguageManager() {
-    yield takeEvery(constants.CHANGE_LANGUAGE_STORE, handleChangeLanguage)
+    yield takeEvery(constants.ACTION_TYPES.CHANGE_LANGUAGE_STORE, handleChangeLanguage)
 }
 
 export function* handleChangeLanguage(action: ChangeLanguageAction) {

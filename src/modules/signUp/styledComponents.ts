@@ -5,7 +5,8 @@ interface IWrapper extends StyledComponentBase<'div', any> {
     Content?: any,
 }
 interface IForm extends StyledComponentBase<any, any> {
-    input?: any
+    input?: any,
+    ButtonWrapper?: any
 }
 interface IContent extends StyledComponentBase<any, any> {
     Form?: any,
@@ -46,6 +47,7 @@ Form.input = styled.input`
   outline: none;
   padding: ${props => props.theme.coefficient * 10}px;
 `;
+Form.ButtonWrapper = styled.div``;
 
 Content.Form = Form;
 Wrapper.Content = Content;

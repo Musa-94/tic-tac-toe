@@ -15,7 +15,7 @@ exports[`CustomButton snapshot should correctly render 1`] = `
 <button
   className="c0"
   fontSize={20}
-  type="submit"
+  type="button"
 >
   Button
 </button>
